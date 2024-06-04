@@ -12,12 +12,13 @@ header {
   width: 70%;
   height: 70px;
   background-color: rgb(12, 15, 45);
-  position: sticky;
+  position: fixed;
   top: 0px;
   left: 15%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 header p span {
   color: mediumspringgreen;
@@ -42,10 +43,31 @@ header form input {
   position: absolute;
   right: 40px;
   top: 20px;
-  transition: ease-in-out 0.5s ;
+  transition: ease-in-out 0.5s;
   padding: 10px;
 }
-header form input:focus{
+#select{
+  height: 30px;
+  width: 100%;
+  border-radius: 15px 15px;
+  background-color: rgb(67, 67, 67);
+  color: white;
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  transition: ease-in-out 0.5s;
+  /* padding: 10px; */
+  padding-left: 10px;
+}
+#select:focus {
+  background-color: black;
+  width: 230%;
+  /* height: 50px; */
+  right: 300px;
+  font-size: 1rem;
+  /* padding: 20px; */
+}
+header form input:focus {
   background-color: black;
   width: 130%;
   /* transition: ease-in-out 1s */
@@ -79,9 +101,10 @@ aside div {
   justify-content: center;
   align-items: center;
   background-color: inherit;
-  transition: ease-in-out 0.5s
+  transition: ease-in-out 0.5s;
+  cursor: pointer ;
 }
-aside div:hover{
+aside div:hover {
   margin-left: 30px;
 }
 aside div i {
@@ -113,7 +136,7 @@ aside div p {
 .header-movie {
   background-color: rgb(60, 60, 69);
   height: auto;
-  padding: 10px;
+  padding: 13px;
   width: 100%;
   color: white;
   font-size: 1.5rem;
@@ -122,14 +145,22 @@ aside div p {
 }
 .card-container {
   width: 100%;
-  height: 1000px;
+  /* height: 1000px; */
   background-color: inherit;
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
 }
+.card-container-episodes {
+  width: 100%;
+  height: 1000px;
+  background-color: inherit;
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+}
 .card {
-  width: 22%;
+  width: 231px;
   height: 340px;
   background-color: rgb(66, 66, 66);
   margin: 0 10px;
@@ -143,10 +174,63 @@ aside div p {
   filter: brightness(0.6);
   transition: ease-in-out 0.4s;
   border-radius: 3px;
+  cursor: pointer;
+}
+.card-episodes {
+  width: 245px;
+  height: 274px;
+  background-color: rgb(66, 66, 66);
+  margin: 0 10px;
+  border-radius: 3px;
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+}
+.card-episodes .img {
+  width: 100%;
+  height: 137px;
+  
+}
+.card-episodes div {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  cursor: pointer;
+}
+.card-episodes div p {
+  color: white;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 68px;
+  padding: 13px;
+}
+.span{
+  width: 70%;
+  height: auto;
+  background-color: rgba(180, 180, 180, 0.555);
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  position: absolute;
+  top: -100%;
+  left: 20%;
+  z-index: 1;
+  transition: ease-in-out 1s;
+}
+.card-episodes div i {
+  color: white;
+  font-size: 3rem;
+  width: 100%;
+  height: 68px;
+  padding: 0px;
+  position: absolute;
+  left: 60%;
+  color: mediumspringgreen;
 }
 .card img:hover {
   filter: brightness(1);
-  scale: .95;
+  scale: 0.95;
 }
 .card-header {
   color: white;
