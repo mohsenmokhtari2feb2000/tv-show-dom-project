@@ -43,7 +43,6 @@ const fetch = async () => {
     optionEle.setAttribute("class", "optionEle");
     selectEle.append(optionEle);
   });
-  const allOptions = document.querySelectorAll(".optionEle");
   const cardsE = document.querySelectorAll(".card-episodes");
   const selectElec = document.querySelector("#select");
   // console.log(allOptions);
@@ -60,17 +59,5 @@ const fetch = async () => {
       }
     });
   });
-
-  // allOptions.forEach((element) => {
-  //   // console.log(ele);
-  //   element.addEventListener("change", (e) => {
-  //     cardsE.forEach((ele) => {
-  //       console.dir(ele.childNodes[1].innerText);
-  //       if (ele.childNodes[1].innerText === element.textContent){
-  //         console.log(ele.childNodes[1].innerText);
-  //       }
-  //     });
-  //   });
-  // });
 };
 fetch();
